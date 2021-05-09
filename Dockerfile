@@ -60,6 +60,8 @@ RUN pip install --requirement /vagrant/requirements.txt
 
 # Start SSH
 RUN mkdir /var/run/sshd
+EXPOSE 5000
+EXPOSE 80
 EXPOSE 22
 RUN /usr/sbin/sshd
 
