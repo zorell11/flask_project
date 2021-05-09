@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block title%}
+        {% endblock %}
+    </title>
+    
+    {% include "_head.jinja" %}
+</head>
+
+<body>
+    <header>
+        <h1><a href={{url_for("view_welcome_page")}}>Severin Murcina</a></h1>
+    </header>   
+    
+    {% include "_nav.jinja" %}
+
+    <main>
+        <blockquote> 
+            {% block main %}
+            {% endblock %}
+        </blockquote>
+    </main>
+
+    {% include "_footer.jinja" %}
+
+</body>
+</html>

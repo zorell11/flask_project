@@ -1,7 +1,19 @@
-{% extends "base.jinja" %}
+{% extends "_main.jinja" %}
+
 {% block title%}
 Articles
 {% endblock %}
-{% block main%}
-List of articles.
+
+{% block main %}
+    <h1>Articles</h1>
+    {% for id, article in articles.items() %}
+    <ul>
+        <li>
+            <h2><a href={{url_for("view_article", art_id=id)}}>{{article.title}}</a></h2>
+            <p>{{article.content | truncate(250)}}</p>
+        </li>
+    </ul>
+    {% endfor %}
+
 {% endblock %}
+
