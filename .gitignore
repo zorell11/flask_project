@@ -1,0 +1,4 @@
+.vagrant/
+__pycache__/
+app.pyc
+mdblog/__pycache__/
