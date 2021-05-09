@@ -1,0 +1,30 @@
+body {
+    padding: 50 20%;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.menu {
+    margin: 0;
+    padding-left: 0; /* ul elementy maju same od seba lavy padding, zrusime */
+    list-style: none; /* toto zrusi tie bodky v zoznamoch */
+    text-align: center;
+}
+
+.menu li,
+.menu a {
+    display: inline-block; /* aby boli vedla seba */
+}
+
+.menu a {
+    margin: 0 5px;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
