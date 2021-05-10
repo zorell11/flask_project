@@ -28,3 +28,9 @@ footer {
     padding: 10px;
     text-decoration: none;
 }
+
+.menu form input {
+    text-decoration: none;
+    border-radius: 30;
+    
+}
