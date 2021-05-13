@@ -2,18 +2,19 @@
 
 {% block title %} Login {% endblock %}
 
-{% block main%}
-    <form action={{url_for("login_user")}} method="post">
-        <p>
-            <label for="">Username</label>
-            <input type="text" name="username">
-        </p>
-        <p>
-            <label for="">Password</label>
-            <input type="password", name="password">
-        </p>
-        <p>
-            <input type="submit", value="login">
-        </p>
-    </form>
+{% block main %}
+
+<form action="{{ url_for("login_user") }}" method="post">
+    {{ form.csrf_token }}
+    <p>
+        {{ form.username.label }}
+        {{ form.username() }}
+    </p>
+    <p>
+        {{ form.password.label }}
+        {{ form.password() }}
+    </p>
+    <input type="submit" value="login">
+</form>
+
 {% endblock %}

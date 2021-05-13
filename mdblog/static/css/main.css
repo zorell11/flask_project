@@ -1,36 +1,58 @@
 body {
-    padding: 50 20%;
+    padding: 0 20%;
+    background: cornsilk;
 }
 
 header {
     text-align: center;
 }
 
-footer {
-    text-align: center;
-}
-
 .menu {
-    margin: 0;
-    padding-left: 0; /* ul elementy maju same od seba lavy padding, zrusime */
-    list-style: none; /* toto zrusi tie bodky v zoznamoch */
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
     text-align: center;
 }
 
-.menu li,
-.menu a {
-    display: inline-block; /* aby boli vedla seba */
+.menu li {
+    display: inline;
 }
 
 .menu a {
-    margin: 0 5px;
-    text-align: center;
+    display: inline-block;
     padding: 10px;
     text-decoration: none;
 }
 
-.menu form input {
-    text-decoration: none;
-    border-radius: 30;
-    
+.menu form {
+    display: inline-block;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+}
+
+.flashes {
+    padding: 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.flashes li {
+    list-style: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 5px;
+    padding: 3px;
+    text-align: center;
+}
+
+.flashes .danger-alert {
+    background: mistyrose;
+}
+.flashes .danger-ok {
+    background: lightgreen;
 }

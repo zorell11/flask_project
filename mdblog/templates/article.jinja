@@ -5,6 +5,10 @@ Article {{article.title}}
 {% endblock %}
 
 {% block main %}
+{% if "logged" in session %}
+<a href="{{url_for("view_edit_article", art_id=article.id)}}">Edit article</a>
+{% endif %}
+
 <h2>{{article.title}}</h2>
 <p>{{article.content}}</p>
 {% endblock %}
